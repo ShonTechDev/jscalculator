@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shonta's Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Serif+Text:ital@0;1&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 class="dancing-script">My Calculator</h1>
+
+<div class="container"> <!--Created a viewport height of 100%-->
+  <div class="calculator">
+    <form>
+
+      <div class="display">
+        <input type="text" name="display"> <!--In this display we will display the RESULT of the calculation-->
+      </div>
+      <!--1st row of buttons-->
+      <div> <!--will add input field, and add type button-->
+        <input type="button" value="AC" onclick="display.value =' ' " class="operator"> <!--because we have to add 4 buttons, we will duplicate this line 4 times. AC means "All Clear/Clear all"-->
+                                                            <!-- ^ places a blank there because we want the AC button to CLEAR the display-->
+        <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)" class="operator">
+                               <!-- ^^ for delete-->
+        <input type="button" value="." onclick="display.value +='+' " class="operator">
+        <input type="button" value="/" onclick="display.value +='/' " class="operator">
+      </div>
+           <!--2nd row of buttons-->
+      <div>
+        <input type="button" value="7" onclick="display.value +='7' "> <!-- where is "display from? on line 15, there you have the input with the NAME 'display' so you title it display.value ", place an equal sign after display.value, and within the single quotes is where you enter the value that will be displayed within it when clicked. then close your double quotes. Next step, adding a "+" before the "=" allows us to click more than once and add more 7's -->
+        <input type="button" value="8" onclick="display.value +='8' ">
+        <input type="button" value="9" onclick="display.value +='9' ">
+        <input type="button" value="*" onclick="display.value +='*' " class="operator">
+      </div>
+            <!--& so on for each row-->
+      <div>
+        <input type="button" value="4" onclick="display.value +='4' ">
+        <input type="button" value="5" onclick="display.value +='5' ">
+        <input type="button" value="6" onclick="display.value +='6' ">
+        <input type="button" value="-" onclick="display.value +='-' " class="operator">
+      </div>
+      <div>
+        <input type="button" value="1" onclick="display.value +='1' ">
+        <input type="button" value="2" onclick="display.value +='2' ">
+        <input type="button" value="3" onclick="display.value +='3' ">
+        <input type="button" value="+" onclick="display.value +='+' " class="operator">
+      </div>
+      <div>
+        <input type="button" value="00" onclick="display.value +='00' ">
+        <input type="button" value="0" onclick="display.value +='0' ">
+        <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal operator">
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+</body>
+</html>
+
+
+    <!-- Create your basic HTML Document
+    -Complete boiler plate, link CSS sheet to HTML
+    -Create container
+    -Create your div within the container and name that class calculater
+      -place your form inside the calculator and a div input with "text" as its type.
+      Complete this above div, then create another div
+    -Create another div within the form, for "button", you'll need 4 for the 4 for functions of the calculator
+      -create one with the value "AC" for "all clear", duplicate it 3 more times.
+    -You'll then, complete 4 rows, copying and pasting 4 inputs total.
+    -Replace the next "AC's" that are in the duplicates to DE, ., and /
+    -Check your HTML, you'll see your first row buttons and input display window.
+    -Now, center it all
+      -How to center: in CSS
+        -Display type, flex, align items- center, and justify-content center.
+    - It is now centered, rounded, added color to it.
+
+    Now, let's add next row of buttons.
+      -Copy the entire div of inputs for your next row of buttons.
+      -Complete and enter in all buttons
+
+    Adjust CSS to match, remove shadow properties from main input line and align it and it's input right
+    Double the size of the equal button
+
+    -Add the "click feature" to the buttons to display the number in the input (for calculating), when clicked.
+      -go to html, add "onclick" feature within the input
+      -Utilize a +=, in order for more than one click to place more than one digit into the display field
+
+    -Add the click function to the top row of buttons (line 19)
+
+    -Place in your different functions for AC, and slice function for DE button
+
+    -Now, code in the functionality of the equal button utilizing: onclick="display.value = eval(display.value)"
+
+    -Now, we're going to add color to the first row button and the last column buttons
+      -check code, all first row buttons, add a class "operator", then style.
+
+
+    -->
+<!---->
